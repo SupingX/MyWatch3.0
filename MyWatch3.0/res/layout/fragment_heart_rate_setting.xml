@@ -45,6 +45,7 @@
             android:textSize="16sp" />
 
         <com.mycj.mywatch.view.CleanEditText
+            android:gravity="center"
             android:inputType="number"
               android:id="@+id/et_max_hr"
             android:layout_width="100dp"
@@ -53,7 +54,6 @@
             android:layout_height="match_parent"
             android:singleLine="true"
             android:layout_alignParentRight="true"
-            android:gravity="center_vertical"
             android:text="00"
             android:textColor="@color/black_device"
             android:textSize="14sp" />
@@ -103,7 +103,7 @@
             android:singleLine="true"
             android:ems="4"
             android:layout_alignParentRight="true"
-            android:gravity="center_vertical"
+          android:gravity="center"
             android:text="00"
             android:textColor="@color/black_device"
             android:textSize="14sp" />

@@ -126,7 +126,7 @@ public class SleepHistoryFragment extends BaseFragment implements OnClickListene
 			c.set(Calendar.DAY_OF_MONTH, i);
 			SleepData findSleepDateByDate = findSleepDateByDate(c.getTime());
 			//有数据就添加
-			if (findSleepDateByDate!=null) {
+			if (findSleepDateByDate!=null&&findSleepDateByDate.getSleeps()!=null) {
 				data.add(getTotalFromSleeps(findSleepDateByDate.getSleeps()));
 				
 			}else{

@@ -313,16 +313,21 @@ public class WeatherActivity extends BaseActivity implements OnClickListener, On
 		edAddress.setOnFocusChangeListener(new OnFocusChangeListener() {
 			@Override
 			public void onFocusChange(View v, final boolean hasFocus) {
-				(new Handler()).postDelayed(new Runnable() {
-					public void run() {
-						InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
-						if (hasFocus) {
-							imm.toggleSoftInput(0, InputMethodManager.HIDE_NOT_ALWAYS);
-						} else {
-							imm.hideSoftInputFromWindow(edAddress.getWindowToken(), 0);
-						}
-					}
-				}, 500);
+//				(new Handler()).postDelayed(new Runnable() {
+//					public void run() {
+//						InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+//						if (hasFocus) {
+//							imm.toggleSoftInput(0, InputMethodManager.HIDE_NOT_ALWAYS);
+//						} else {
+//							imm.hideSoftInputFromWindow(edAddress.getWindowToken(), 0);
+//						}
+//					}
+//				}, 500);
+				
+				   //如果获得焦点，则弹出键盘
+				   if (hasFocus) {
+			            getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_VISIBLE);
+			       }
 			}
 		});
 	}

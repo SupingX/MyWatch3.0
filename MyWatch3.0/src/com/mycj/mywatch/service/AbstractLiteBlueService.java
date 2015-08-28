@@ -767,7 +767,16 @@ public abstract class AbstractLiteBlueService extends Service {
 				break;
 			case 6:
 				currentState = ConnectState.DisConnected;
-
+				if (isBinded()) {
+					startScanUsePeriodScanCallback();// 掉线时并且是绑定状态 ， 开始运行 。实现短线重连
+				}
+				bleGattDisConnected();
+				
+				currentBluetoothDevice = null;
+				currentCharacteristicWrite = null;
+				mBluetoothGatt.close();
+				mBluetoothGatt = null;
+				
 				mHandler.postDelayed(new Runnable() {
 					@Override
 					public void run() {
@@ -781,14 +790,8 @@ public abstract class AbstractLiteBlueService extends Service {
 					}
 
 				}, 5000);
-				currentBluetoothDevice = null;
-				currentCharacteristicWrite = null;
-				mBluetoothGatt.close();
-				mBluetoothGatt = null;
-				bleGattDisConnected();
-				if (!isScanning) {
-					startScanUsePeriodScanCallback();// 掉线时开始运行
-				}
+			
+			
 				break;
 
 			default:

@@ -88,10 +88,10 @@ public class LiteBlueService extends AbstractLiteBlueService {
 
 			break;
 		case ProtocolForNotify.NOTIFY_CAMERA:
-			// kai
-			Intent it = new Intent(this, CameraActivity.class);
-			it.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-			startActivity(it);
+			// kai 手动打开照相界面
+//			Intent it = new Intent(this, CameraActivity.class);
+//			it.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+//			startActivity(it);
 			// 拍照
 			int notifyForCamera = notify.notifyForCamera(data);
 			bleTakeCamera(notifyForCamera);

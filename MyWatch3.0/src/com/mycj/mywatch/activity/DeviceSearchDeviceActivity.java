@@ -38,13 +38,18 @@ public class DeviceSearchDeviceActivity extends BaseActivity implements OnClickL
 		public void onReceive(Context context, Intent intent) {
 			String action = intent.getAction();
 			if (action.equals(AbstractLiteBlueService.LITE_GATT_DEVICE_FOUND)) {
+			
 
 			} else if (action.equals(AbstractLiteBlueService.LITE_GATT_DISCONNECTED)) {
 				tvDisconnect.setText("disconneted");
 				tvRssi.setText("-----");
+				mHandler.removeCallbacks(run);
 			} else if (action.equals(AbstractLiteBlueService.LITE_GATT_SERVICE_DISCOVERED)) {
 				tvDisconnect.setText("");
-
+				if (mLiteBlueService.isBinded()) {
+					mHandler.removeCallbacks(run);
+					mHandler.post(run);
+				}
 			} else if (action.equals(AbstractLiteBlueService.LITE_CHARACTERISTIC_RSSI_CHANGED)) {
 				final int rssi = intent.getExtras().getInt(LiteBlueService.EXTRA_RSSI);
 				runOnUiThread( new Runnable() {
@@ -123,21 +128,21 @@ public class DeviceSearchDeviceActivity extends BaseActivity implements OnClickL
 			@Override
 			public void run() {
 				Log.v("", "______请求rssi_______");
-				if (mLiteBlueService.isServiceDiscovered()&&mLiteBlueService.isBinded()) {
-					
+			
+					mLiteBlueService.readRemoteRssi();
+//					mSimpleBlueService.readRemoteRssi();
+					mHandler.sendEmptyMessage(0);
 				}
-				mLiteBlueService.readRemoteRssi();
-//				mSimpleBlueService.readRemoteRssi();
-				mHandler.sendEmptyMessage(0);
-			}
+			
+		
 		};
 	}
 	
 	@Override
 	protected void onResume() {
 		radar.start();
-		mHandler.post(run);
 		if (mLiteBlueService.isServiceDiscovered()&&mLiteBlueService.isBinded()) {
+			mHandler.post(run);
 			tvDisconnect.setText("");
 			mLiteBlueService.writeCharacticsUseConnectListener(ProtocolForWrite.instance().getByteForAvoidLose(0x01));
 		}else{
@@ -152,6 +157,7 @@ public class DeviceSearchDeviceActivity extends BaseActivity implements OnClickL
 		radar.stop();
 		if (mLiteBlueService.isServiceDiscovered()&&mLiteBlueService.isBinded()) {
 			mLiteBlueService.writeCharacticsUseConnectListener(ProtocolForWrite.instance().getByteForAvoidLose(0xA1));
+			mHandler.removeCallbacks(run);
 		}
 		super.onPause();
 	}

@@ -47,29 +47,29 @@ public class ProtocolForNotify extends AbstractProtocolForNotify {
 		logV(dataStr);
 		if (pro.equals("F3") && dataStr.length() >= 4) {
 			return NOTIFY_REMIND;
-		} else if (pro.equals("F4") && dataStr.length() == 2) {
+		} else if (pro.equals("F4") && dataStr.length() >= 2) {
 			return NOTIFY_SYNC_TIME;
 		} else if (pro.equals("F5") && dataStr.length() >= 4) {
 			return NOTIFY_CAMERA;
 		} else if (pro.equals("F6") && dataStr.length() >= 6) {
 			return NOTIFY_MUSIC;
-		} else if (pro.equals("F7") && dataStr.length() == 32) {
+		} else if (pro.equals("F7") && dataStr.length() >= 32) {
 			return NOTIFY_STEP;
-		} else if (pro.equals("F9") && dataStr.length() == 20) {
+		} else if (pro.equals("F9") && dataStr.length() >= 20) {
 			return NOTIFY_HEART_RATE;
-		} else if (pro.equals("FE") && obj.equals("04") && dataStr.length() == 12) {
+		} else if (pro.equals("FE") && obj.equals("04") && dataStr.length() >= 12) {
 			return NOTIFY_HISTORY_HEART_RATE;
-		} else if (pro.equals("FE") && obj.equals("00") && dataStr.length() == 14) {
+		} else if (pro.equals("FE") && obj.equals("00") && dataStr.length() >= 14) {
 			return NOTIFY_HISTORY_STEP;
-		} else if (pro.equals("FE") && obj.equals("05") && dataStr.length() == 30) {
+		} else if (pro.equals("FE") && obj.equals("05") && dataStr.length() >= 30) {
 			return NOTIFY_HISTORY_SLEEP;
-		} else if (pro.equals("FE") && obj.equals("01") && dataStr.length() == 14) {
+		} else if (pro.equals("FE") && obj.equals("01") && dataStr.length() >= 14) {
 			return NOTIFY_HISTORY_DISTACE;
-		} else if (pro.equals("FE") && obj.equals("02") && dataStr.length() == 14) {
+		} else if (pro.equals("FE") && obj.equals("02") && dataStr.length() >= 14) {
 			return NOTIFY_HISTORY_CAL;
-		} else if (pro.equals("FE") && obj.equals("03") && dataStr.length() == 14) {
+		} else if (pro.equals("FE") && obj.equals("03") && dataStr.length() >= 14) {
 			return NOTIFY_HISTORY_SPORT_TIME;
-		} else if (pro.equals("FE") && obj.equals("06") && dataStr.length() == 30) {
+		} else if (pro.equals("FE") && obj.equals("06") && dataStr.length() >= 30) {
 			return NOTIFY_HISTORY_SLEEP_FOR_TODAY;
 		} else {
 			logE("错误的数据");

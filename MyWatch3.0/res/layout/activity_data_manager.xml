@@ -144,7 +144,7 @@
             android:layout_height="match_parent"
             android:layout_toRightOf="@id/img_min_hr"
             android:gravity="center_vertical"
-            android:text="清楚数据"
+            android:text="清除数据"
             android:textColor="@color/black"
             android:textSize="16sp" />
 

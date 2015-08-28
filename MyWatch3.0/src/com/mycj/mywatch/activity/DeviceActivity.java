@@ -256,15 +256,19 @@ public class DeviceActivity extends BaseActivity implements OnClickListener {
 			dialog.addSheetItem(getResources().getString(R.string.confirm), SheetItemColor.Red, new OnSheetItemClickListener() {
 				@Override
 				public void onClick(int which) {
-					runOnUiThread(new Runnable() {
+					mLiteBlueService.closeAll();
+					final ProgressDialog showProgressDialog = showProgressDialog("连接关闭中...");
+					mHandler.postDelayed(new Runnable() {
+						@Override
 						public void run() {
-							mLiteBlueService.closeAll();
+							showProgressDialog.dismiss();
 							mLiteBlueService.setCurrentBluetoothDevice(null);
 							mLiteBlueService.saveBindedDevie(null);
 							setCurrentDevice();
+							setDeviceConnectState();
+//							tvDeviceConnectState.setText("未连接");
 						}
-					});
-
+					}, 200);
 				}
 			}).show();
 		} else {
