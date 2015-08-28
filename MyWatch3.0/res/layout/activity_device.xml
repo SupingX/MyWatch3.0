@@ -1,0 +1,311 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="${relativePackage}.${activityClass}" >
+
+     <RelativeLayout
+            android:id="@+id/rl_home"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@color/color_top_blue" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="DEVICE"
+                android:textColor="@color/white"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <FrameLayout
+                android:id="@+id/fl_home"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_alignParentLeft="true"
+                android:background="@drawable/selector_home_bg"
+                android:clickable="true" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:clickable="false"
+                    android:src="@drawable/ic_home_page_icon" />
+            </FrameLayout>
+        </RelativeLayout>
+
+	<ScrollView 
+	    android:layout_height="wrap_content"
+	    android:layout_width="match_parent"
+	    android:overScrollMode="ifContentScrolls"
+	    android:fadingEdge="vertical"
+	    >
+            <LinearLayout android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+        <TextView
+         android:layout_marginTop="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+     		 android:gravity="bottom"
+            android:padding="12dp"
+            android:textColor="@color/black_device"
+            android:text="@string/connected_watch"
+            android:textSize="16sp" />
+        <View 
+            android:layout_height="0.1px"
+            android:layout_width="match_parent"
+            android:background="@color/alertdialog_line"
+            />
+
+
+      
+
+	
+    <RelativeLayout 
+        android:layout_height="54dp"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:padding="12dp"
+        >
+
+        <ImageView
+                  android:layout_marginRight="12dp"
+            android:id="@+id/img_disconnect_device"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:gravity="center"
+            android:src="@drawable/ic_device_bind" />
+
+        <LinearLayout 
+            android:layout_toRightOf="@id/img_disconnect_device"
+            android:orientation="horizontal"
+            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            >
+
+    <TextView
+        android:id="@+id/tv_current_device_name"
+        android:layout_width="wrap_content"
+        android:gravity="center_vertical"
+        android:layout_height="match_parent"
+        android:textSize="18sp" 
+        android:textColor="@color/black"
+        />
+       <TextView
+           android:layout_marginLeft="8dp"
+        android:id="@+id/tv_current_device_address"
+        android:layout_width="wrap_content"
+        android:gravity="center_vertical"
+        android:layout_height="match_parent"
+        android:textSize="12sp" 
+        android:textColor="@color/black"
+        />
+       </LinearLayout>
+
+               <ImageView
+                   android:id="@+id/img_current_device_exit"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_alignParentEnd="true"
+                   android:layout_centerVertical="true"
+                   android:layout_gravity="center_vertical"
+                   android:clickable="true"
+                   android:gravity="center"
+                   android:src="@drawable/ic_action_about" />
+
+               </RelativeLayout>
+       <View 
+            android:layout_height="0.1px"
+            android:layout_width="match_parent"
+            android:background="@color/alertdialog_line"
+            />
+  
+
+
+        <TextView
+                          android:id="@+id/tv_current_device_connect_state"
+            android:layout_width="wrap_content"
+            android:layout_height="44dp"
+            android:padding="12dp"
+                        android:textColor="@color/black_device"
+            android:gravity="center_vertical"
+            android:textSize="16sp" />
+        
+            <View 
+                android:layout_marginTop="44dp"
+            android:layout_height="0.1px"
+            android:layout_width="match_parent"
+            android:background="@color/alertdialog_line"
+            />
+
+<RelativeLayout 
+    android:id="@+id/rl_search"
+        android:layout_height="48dp"
+        android:layout_width="match_parent"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:clickable="true"
+        style="@style/DeviceItem"
+        >
+
+        <ImageView
+            android:layout_marginRight="12dp"
+            android:id="@+id/img_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:src="@drawable/ic_device_search" />
+
+
+    <TextView
+        android:id="@+id/tv_search"
+        android:layout_toRightOf="@id/img_search"
+        android:layout_width="wrap_content"
+        android:gravity="center_vertical"
+        android:layout_height="match_parent"
+        android:text="Search device"
+        android:textSize="18sp" 
+      android:textColor="@color/black_device"
+        />
+
+               <ImageView
+                   android:id="@+id/img_next"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_alignParentEnd="true"
+                   android:layout_centerVertical="true"
+                   android:layout_gravity="center_vertical"
+                   android:clickable="true"
+                   android:gravity="center"
+                   android:src="@drawable/ic_action_next_item" />
+
+               </RelativeLayout>
+                   <View 
+            android:layout_height="0.1px"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="48dp"
+            android:background="@color/alertdialog_line"
+            />
+
+<RelativeLayout
+    android:id="@+id/rl_bind_other"
+    style="@style/DeviceItem"
+    android:layout_width="match_parent"
+        android:layout_height="48dp"
+    android:clickable="true"
+   android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp" >
+
+    <ImageView
+        android:id="@+id/img_bind_other"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="12dp"
+        android:clickable="true"
+        android:gravity="center"
+        android:src="@drawable/ic_device_bind_other" />
+
+    <TextView
+        android:id="@+id/tv_bind_other"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@id/img_bind_other"
+        android:gravity="center_vertical"
+        android:text="Bind other device"
+        android:textColor="@color/black_device"
+        android:textSize="18sp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center_vertical"
+        android:clickable="true"
+        android:gravity="center"
+        android:src="@drawable/ic_action_next_item" />
+
+    
+</RelativeLayout>
+
+          <View 
+            android:layout_height="0.1px"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="48dp"
+            android:background="@color/alertdialog_line"
+            />
+
+<RelativeLayout 
+                   
+        android:layout_height="48dp"
+        android:layout_width="match_parent"
+                android:clickable="true"
+  android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        >
+
+        <ImageView
+            android:layout_marginRight="12dp"
+            android:id="@+id/img_remind"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:gravity="center"
+            android:src="@drawable/ic_device_remind" />
+
+
+    <TextView
+        android:id="@+id/tv_disconnect_remind"
+        android:layout_toRightOf="@id/img_remind"
+        android:layout_width="wrap_content"
+        android:gravity="center_vertical"
+        android:layout_height="match_parent"
+        android:text="Disconnect Reminded"
+        android:textSize="18sp" 
+      android:textColor="@color/black_device"
+        />
+
+               <CheckBox
+                   android:id="@+id/cb_remind"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_alignParentEnd="true"
+                   android:layout_centerVertical="true"
+                   android:layout_gravity="center_vertical"
+                   android:clickable="true"
+					android:checked="false"
+                   android:gravity="center"
+                   android:button="@drawable/selector_device_cb"
+                 />
+
+               </RelativeLayout>
+              <View 
+            android:layout_height="0.1px"
+            android:layout_width="match_parent"
+            android:background="@color/alertdialog_line"
+            />
+    
+     </LinearLayout></ScrollView>
+
+</LinearLayout>

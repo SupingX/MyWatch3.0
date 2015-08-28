@@ -1,0 +1,355 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <RelativeLayout
+        android:id="@+id/rl_home"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/color_top_blue" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="MORE"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <FrameLayout
+            android:id="@+id/fl_home"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/selector_home_bg"
+            android:clickable="true" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:clickable="false"
+                android:src="@drawable/ic_home_page_icon" />
+        </FrameLayout>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1px"
+        android:layout_marginTop="24dp"
+        android:background="@color/alertdialog_line" />
+
+    <RelativeLayout
+        android:id="@+id/rl_remind_call"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp" >
+
+        <ImageView
+            android:id="@+id/img_remind_call"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="12dp"
+            android:gravity="center"
+            android:src="@drawable/ic_more_call" />
+
+        <TextView
+            android:id="@+id/tv_remind_call"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/img_remind_call"
+            android:gravity="center_vertical"
+            android:text="Call Reminder"
+            android:textColor="@color/black_device"
+            android:textSize="18sp" />
+     <CheckBox
+                   android:id="@+id/cb_remind_call"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_alignParentEnd="true"
+                   android:layout_centerVertical="true"
+                   android:layout_gravity="center_vertical"
+                   android:clickable="true"
+					android:checked="false"
+                   android:gravity="center"
+                   android:button="@drawable/selector_device_cb"
+                 />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1px"
+        android:layout_marginLeft="48dp"
+        android:background="@color/alertdialog_line" />
+      <RelativeLayout
+        android:id="@+id/rl_music"
+        style="@style/DeviceItem"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:clickable="true"
+       android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp" >
+
+        <ImageView
+            android:id="@+id/img_music"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="12dp"
+            android:gravity="center"
+            android:src="@drawable/ic_more_music" />
+
+        <TextView
+            android:id="@+id/tv_music"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/img_music"
+            android:gravity="center_vertical"
+            android:text="Music"
+            android:textColor="@color/black_device"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:clickable="true"
+            android:gravity="center"
+            android:src="@drawable/ic_action_next_item" />
+    </RelativeLayout>
+       <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1px"
+        android:background="@color/alertdialog_line" />
+       
+          <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1px"
+        android:layout_marginTop="24dp"
+        android:background="@color/alertdialog_line" />
+          
+             <RelativeLayout
+        android:id="@+id/rl_data"
+        style="@style/DeviceItem"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:clickable="true"
+     android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp" >
+
+        <ImageView
+            android:id="@+id/img_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="12dp"
+            android:gravity="center"
+            android:src="@drawable/ic_more_data_manage" />
+
+        <TextView
+            android:id="@+id/tv_data"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/img_data"
+            android:gravity="center_vertical"
+            android:text="Data Manager"
+            android:textColor="@color/black_device"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:clickable="true"
+            android:gravity="center"
+            android:src="@drawable/ic_action_next_item" />
+    </RelativeLayout>
+        <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1px"
+        android:layout_marginLeft="48dp"
+        android:background="@color/alertdialog_line" />
+                <RelativeLayout
+        android:id="@+id/rl_time_sync"
+        style="@style/DeviceItem"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:clickable="true"
+    android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp" >
+
+        <ImageView
+            android:id="@+id/img_time_sync"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="12dp"
+            android:gravity="center"
+            android:src="@drawable/ic_more_time_sync" />
+
+        <TextView
+            android:id="@+id/tv_time_sync"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/img_time_sync"
+            android:gravity="center_vertical"
+            android:text="Watch Time Sync"
+            android:textColor="@color/black_device"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/img_time_sync_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:clickable="true"
+            android:gravity="center"
+            android:src="@drawable/ic_action_next_item" />
+
+           <ImageView
+               android:id="@+id/img_time_sync_loading"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_centerVertical="true"
+               android:layout_marginRight="12dp"
+                            android:visibility="invisible"
+               android:layout_toLeftOf="@id/img_time_sync_next"
+               android:src="@drawable/ic_loading" />
+
+    </RelativeLayout>
+     <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1px"
+        android:layout_marginLeft="48dp"
+        android:background="@color/alertdialog_line" />
+       <RelativeLayout
+        android:id="@+id/rl_shut"
+        style="@style/DeviceItem"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:clickable="true"
+   android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp" >
+
+        <ImageView
+            android:id="@+id/img_shut"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="12dp"
+            android:gravity="center"
+            android:src="@drawable/ic_more_shutdown" />
+
+        <TextView
+            android:id="@+id/tv_shut"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/img_shut"
+            android:gravity="center_vertical"
+            android:text="Shutdown Watch"
+            android:textColor="@color/black_device"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/img_shut_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:clickable="true"
+            android:gravity="center"
+            android:src="@drawable/ic_action_next_item" />
+            <ImageView
+                               android:id="@+id/img_shut_loading"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_centerVertical="true"
+               android:layout_marginRight="12dp"
+               android:visibility="invisible"
+               android:layout_toLeftOf="@id/img_shut_next"
+               android:src="@drawable/ic_loading" />
+    </RelativeLayout>
+        <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1px"
+        android:background="@color/alertdialog_line" />
+            <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1px"
+        android:layout_marginTop="24dp"
+        android:background="@color/alertdialog_line" />
+       <RelativeLayout
+        android:id="@+id/rl_about"
+        style="@style/DeviceItem"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:clickable="true"
+   android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp" >
+
+        <ImageView
+            android:id="@+id/img_about"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="12dp"
+            android:gravity="center"
+            android:src="@drawable/ic_more_about" />
+
+        <TextView
+            android:id="@+id/tv_about"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/img_about"
+            android:gravity="center_vertical"
+            android:text="About"
+            android:textColor="@color/black_device"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:clickable="true"
+            android:gravity="center"
+            android:src="@drawable/ic_action_next_item" />
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1px"
+        android:background="@color/alertdialog_line" />
+</LinearLayout>

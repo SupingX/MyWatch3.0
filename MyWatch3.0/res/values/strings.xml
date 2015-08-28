@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">MyWatch3.0</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_pedometer">PedometerActivity</string>
+    <string name="title_activity_heart_rate">HeartRateActivity</string>
+    <string name="title_activity_clock">ClockActivity</string>
+    <string name="title_activity_camera">CameraActivity</string>
+    <string name="title_activity_sleep">SleepActivity</string>
+    <string name="title_activity_device">DeviceActivity</string>
+    <string name="title_activity_weather">WeatherActivity</string>
+    <string name="title_activity_more">MoreActivity</string>
+    <string name="connected_watch">BOUND DEVICE</string>
+    <string name="device_none">BOUND DEVICE</string>
+    <string name="other_watch">Disconnected</string>
+    <string name="title_activity_test">TestActivity</string>
+    <string name="title_activity_device_search_device">DeviceSearchDeviceActivity</string>
+    <string name="title_activity_device_bind_other">DeviceBindOtherActivity</string>
+    <string name="contact_binding">Contact binding?</string>
+    <string name="confirm">Confirm</string>
+    <string name="no_device_binding">No device binding</string>
+    <string name="title_activity_music">MusicActivity</string>
+    <string name="title_activity_data_manager">DataManagerActivity</string>
+    <string name="title_activity_spalish">SpalishActivity</string>
+    <string name="title_activity_pedometer_setting_target">PedometerSettingTargetActivity</string>
+    <string name="title_activity_pedometer_height">PedometerHeightActivity</string>
+    <string name="title_activity_pedometer_weight">PedometerWeightActivity</string>
+    <string name="title_activity_pedometer_setting_gender">PedometerSettingGenderActivity</string>
+    <string name="title_activity_pedometer_setting_age">PedometerSettingAgeActivity</string>
+    <string name="title_activity_sleep_setting_start_time">SleepSettingStartTimeActivity</string>
+    <string name="title_activity_sleep_setting_end_time">SleepSettingEndTimeActivity</string>
+    <string name="preious">"&lt;&lt; "</string>
+    <string name="next">" >>"</string>
+    <string name="title_activity_dialog">DialogActivity</string>
+
+</resources>

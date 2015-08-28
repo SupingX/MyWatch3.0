@@ -1,0 +1,116 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MusicActivity" >
+
+    <LinearLayout
+        android:id="@+id/ll"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:weightSum="3" >
+
+        <ImageView
+            android:padding="4dp"
+            android:id="@+id/img_music_preious"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+              android:src="@drawable/ic_music_preious" />
+
+        <ImageView
+                      android:padding="4dp"
+             android:id="@+id/img_music_start_or_stop"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/ic_music_play"
+    />
+
+
+        <ImageView
+                      android:padding="4dp"
+       android:id="@+id/img_music_next"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+       android:src="@drawable/ic_music_next" />
+    </LinearLayout>
+    <View
+            android:layout_above="@id/ll" 
+            android:layout_height="1dp"
+            android:layout_width="match_parent"
+            android:background="@color/grey"/>
+    <RelativeLayout
+        android:id="@+id/rl_contont"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/ll" >
+
+     <RelativeLayout
+         android:id="@+id/rl_top"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@color/color_top_blue" >
+           
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="MUSIC"
+                 
+                android:textColor="@color/white"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:id="@+id/rl_more"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:layout_alignParentLeft="true"
+                android:background="@drawable/selector_home_bg"
+                android:clickable="true" >
+
+                <ImageView
+                    android:id="@+id/img_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:clickable="false"
+                    android:src="@drawable/ic_action_previous_item" />
+
+                    <TextView
+                                android:clickable="false"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_centerVertical="true"
+                   android:layout_toRightOf="@id/img_back"
+                   android:text="MORE"
+                   android:textColor="@color/white"
+                   android:textSize="12sp"
+                   android:textStyle="bold" />
+            </RelativeLayout>
+
+           
+
+        </RelativeLayout>
+
+        <ListView
+            android:id="@+id/lv_msc"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/rl_top"
+            android:divider="@color/grey"
+            android:dividerHeight="1px" >
+        </ListView>
+        
+    
+    </RelativeLayout>
+
+</RelativeLayout>

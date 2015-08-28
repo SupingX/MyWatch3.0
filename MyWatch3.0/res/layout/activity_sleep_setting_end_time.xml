@@ -1,0 +1,142 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <RelativeLayout
+        android:layout_alignParentTop="true"
+        android:id="@+id/rl_home"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/color_top_blue" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="End Time"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <FrameLayout
+            android:id="@+id/fl_home"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/selector_home_bg"
+            android:clickable="true" >
+
+                <RelativeLayout
+        android:id="@+id/rl_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/selector_home_bg"
+            android:clickable="true" >
+
+            <ImageView
+                android:id="@+id/img_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:clickable="false"
+                android:src="@drawable/ic_action_previous_item" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/img_back"
+                android:text="SETTING"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+        </FrameLayout>
+
+        <TextView
+            android:gravity="center"
+            android:background="@drawable/selector_home_bg"
+            android:clickable="true"
+            android:id="@+id/tv_save"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="12dp"
+            android:text="Save"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <View
+        android:layout_below="@id/rl_home"
+        android:id="@+id/line_1"
+        android:layout_width="match_parent"
+        android:layout_height="0.1px"
+        android:layout_marginTop="24dp"
+        android:background="@color/alertdialog_line" />
+
+    <RelativeLayout
+        android:layout_below="@id/line_1"
+                android:id="@+id/rl_on_off"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:clickable="true"
+        android:padding="6dp" >
+
+        <!-- <ImageView
+            android:id="@+id/img_remind"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="12dp"
+            android:clickable="true"
+            android:gravity="center"
+            android:src="@drawable/ic_clock_icon" /> -->
+
+        <TextView
+            android:id="@+id/tv_end_time"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/img_remind"
+            android:gravity="center_vertical"
+            android:textColor="@color/black_device"
+            android:textSize="22sp" />
+
+        <!-- <CheckBox
+            android:id="@+id/cb_clock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:button="@drawable/selector_device_cb"
+            android:checked="false"
+            android:clickable="true"
+            android:gravity="center" /> -->
+    </RelativeLayout>
+
+    <View
+                        android:id="@+id/line_2"
+                        android:layout_below="@id/rl_on_off"
+        android:layout_width="match_parent"
+        android:layout_height="0.1px"
+        android:background="@color/alertdialog_line" />
+    
+    <RelativeLayout 
+        android:layout_below="@id/line_2"
+        android:layout_marginTop="40dp"
+        android:id="@+id/rl_end"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        >
+        
+</RelativeLayout>    
+
+</RelativeLayout>

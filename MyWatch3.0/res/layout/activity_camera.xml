@@ -1,0 +1,38 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="${packageName}.${activityClass}" >
+
+    <FrameLayout
+        android:id="@+id/frame_camera"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true" >
+        
+       <com.mycj.mywatch.view.CameraSurfaceView 
+            android:id="@+id/surface_camera"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            /> 
+   <!--      <com.mycj.mywatch.test.CameraSurfaceView 
+            android:id="@+id/surface_camera"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            /> -->
+    </FrameLayout>
+
+
+
+
+    <ImageView
+        android:id="@+id/img_take_picture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:contentDescription="@string/app_name"
+        android:padding="10dp"
+        android:src="@drawable/ic_camera_btn" />
+
+</RelativeLayout>

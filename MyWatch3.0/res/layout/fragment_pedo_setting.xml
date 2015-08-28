@@ -1,0 +1,325 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1px"
+        android:layout_marginTop="24dp"
+        android:background="@color/alertdialog_line" />
+
+    <RelativeLayout
+        android:id="@+id/rl_target"
+        style="@style/DeviceItem"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:clickable="true"
+   android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp" >
+
+        <ImageView
+                 android:visibility="gone"
+            android:id="@+id/img_target"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="12dp"
+            android:gravity="center"
+            android:src="@drawable/ic_more_shutdown" />
+
+        <TextView
+            android:id="@+id/tv_target"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/img_target"
+            android:gravity="center_vertical"
+            android:text="Step Target"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/img_target_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:clickable="true"
+            android:gravity="center"
+            android:src="@drawable/ic_action_next_item" />
+         <TextView
+            android:id="@+id/tv_target_value"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+               android:layout_toLeftOf="@id/img_target_next"
+            android:gravity="center_vertical"
+            android:text="100036"
+            android:textColor="@color/black_device"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+       <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1px"
+        android:background="@color/alertdialog_line" />
+       
+          <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1px"
+        android:layout_marginTop="24dp"
+        android:background="@color/alertdialog_line" />
+          
+             <RelativeLayout
+        android:id="@+id/rl_height"
+        style="@style/DeviceItem"
+              android:clickable="true"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+  
+   android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp" >
+
+        <ImageView
+                 android:visibility="gone"
+            android:id="@+id/img_height"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="12dp"
+            android:gravity="center"
+            android:src="@drawable/ic_more_shutdown" />
+
+        <TextView
+            android:id="@+id/tv_height"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/img_height"
+            android:gravity="center_vertical"
+            android:text="Height"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/img_height_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:clickable="true"
+            android:gravity="center"
+            android:src="@drawable/ic_action_next_item" />
+         <TextView
+            android:id="@+id/tv_height_unit"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+               android:layout_toLeftOf="@id/img_height_next"
+            android:gravity="center_vertical"
+            android:text=" CM"
+            android:textColor="@color/black_device"
+            android:textSize="14sp" />
+               <TextView
+            android:id="@+id/tv_height_value"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+               android:layout_toLeftOf="@id/tv_height_unit"
+            android:gravity="center_vertical"
+            android:text="175"
+            android:textColor="@color/black_device"
+            android:textSize="14sp" />
+    </RelativeLayout>
+        <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1px"
+           android:layout_marginLeft="12dp"
+        android:background="@color/alertdialog_line" />
+                <RelativeLayout
+        android:id="@+id/rl_weight"
+        style="@style/DeviceItem"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:clickable="true"
+   android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp" >
+
+        <ImageView
+                 android:visibility="gone"
+            android:id="@+id/img_weight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="12dp"
+            android:gravity="center"
+            android:src="@drawable/ic_more_shutdown" />
+
+        <TextView
+            android:id="@+id/tv_weight"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/img_weight"
+            android:gravity="center_vertical"
+            android:text="Weight"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/img_weight_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:clickable="true"
+            android:gravity="center"
+            android:src="@drawable/ic_action_next_item" />
+         <TextView
+            android:id="@+id/tv_weight_unit"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+               android:layout_toLeftOf="@id/img_weight_next"
+            android:gravity="center_vertical"
+            android:text=" KG"
+            android:textColor="@color/black_device"
+            android:textSize="14sp" />
+             <TextView
+            android:id="@+id/tv_weight_value"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+               android:layout_toLeftOf="@id/tv_weight_unit"
+            android:gravity="center_vertical"
+            android:text="60"
+            android:textColor="@color/black_device"
+            android:textSize="14sp" />
+    </RelativeLayout>
+     <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1px"
+          android:layout_marginLeft="12dp"
+        android:background="@color/alertdialog_line" />
+      <RelativeLayout
+        android:id="@+id/rl_gender"
+        style="@style/DeviceItem"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:clickable="true"
+   android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp" >
+
+        <ImageView
+                 android:visibility="gone"
+            android:id="@+id/img_gender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="12dp"
+            android:gravity="center"
+            android:src="@drawable/ic_more_shutdown" />
+
+        <TextView
+            android:id="@+id/tv_gender"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/img_gender"
+            android:gravity="center_vertical"
+            android:text="Gender"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/img_gender_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:clickable="true"
+            android:gravity="center"
+            android:src="@drawable/ic_action_next_item" />
+         <TextView
+            android:id="@+id/tv_gender_value"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+               android:layout_toLeftOf="@id/img_gender_next"
+            android:gravity="center_vertical"
+            android:text="Female"
+            android:textColor="@color/black_device"
+            android:textSize="14sp" />
+    </RelativeLayout>
+         <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1px"
+        android:layout_marginLeft="12dp"
+        android:background="@color/alertdialog_line" />
+    <RelativeLayout
+        android:id="@+id/rl_age"
+        style="@style/DeviceItem"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:clickable="true"
+   android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp" >
+
+        <ImageView
+                 android:visibility="gone"
+            android:id="@+id/img_age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="12dp"
+            android:gravity="center"
+            android:src="@drawable/ic_more_shutdown" />
+
+        <TextView
+            android:id="@+id/tv_age"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/img_age"
+            android:gravity="center_vertical"
+            android:text="Age"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/img_age_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:clickable="true"
+            android:gravity="center"
+            android:src="@drawable/ic_action_next_item" />
+         <TextView
+            android:id="@+id/tv_age_value"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+               android:layout_toLeftOf="@id/img_age_next"
+            android:gravity="center_vertical"
+            android:text="36"
+            android:textColor="@color/black_device"
+            android:textSize="14sp" />
+    </RelativeLayout>
+        <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1px"
+        android:background="@color/alertdialog_line" />
+</LinearLayout>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="color_bg">#59A4E3</color>
+    <color name="color_grey_bg">#efeff4</color>
+    <color name="color_orange">#F4A739</color>
+    <color name="color_top_blue">#59A4E3</color>
+    <color name="color_top_blue_lighter">#A0C9ED</color>
+    <color name="white">#fff</color>
+    <color name="grey">#929292</color>
+    <color name="grey_light">#22929292</color>
+    <color name="color_bg_arc">#ff8c78</color>
+    <color name="color_awak">#ffd661</color>
+    <color name="color_light">#59A4E3</color>
+    <color name="color_deep">#a441a6</color>
+    <color name="text_black">#555555</color>
+    
+    <color name="trans">#00000000</color>
+    <color name="black">#000000</color>
+    <color name="alertdialog_line">#c6c6c6</color>
+    <color name="actionsheet_blue">#037BFF</color>
+    <color name="actionsheet_red">#FD4A2E</color>
+    <color name="actionsheet_gray">#8F8F8F</color>
+    
+    <color name="black_device">#6d6d72</color>
+    <color name="black_view_bg">#c8c7cc</color>
+    
+    
+
+</resources>

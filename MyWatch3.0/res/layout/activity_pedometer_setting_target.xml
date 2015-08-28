@@ -1,0 +1,85 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="${relativePackage}.${activityClass}" >
+	<RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:clickable="true"
+        android:background="@color/color_top_blue" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="TARGET"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+                   android:clickable="false"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+        android:id="@+id/rl_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/selector_home_bg"
+            android:clickable="true" >
+
+            <ImageView
+                android:id="@+id/img_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:clickable="false"
+                android:src="@drawable/ic_action_previous_item" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/img_back"
+                android:text="SETTING"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+                <TextView
+            android:gravity="center"
+            android:background="@drawable/selector_home_bg"
+            android:clickable="true"
+            android:id="@+id/tv_save"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="12dp"
+            android:text="Save"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <com.mycj.mywatch.view.CleanEditText
+            android:id="@+id/ed_target"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:digits="1234567890"
+            android:hint="设置范围500~100000"
+            android:maxLength="16"
+            android:padding="12dp"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:width="220dp" >
+            <requestFocus />
+        </com.mycj.mywatch.view.CleanEditText>
+    </RelativeLayout>
+
+</LinearLayout>

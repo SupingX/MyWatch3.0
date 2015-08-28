@@ -1,0 +1,165 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context="${relativePackage}.${activityClass}" >
+
+       
+          <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1px"
+        android:layout_marginTop="24dp"
+        android:background="@color/alertdialog_line" />
+          
+             <RelativeLayout
+        android:id="@+id/rl_start_time"
+        style="@style/DeviceItem"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:clickable="true"
+   android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp" >
+
+        <ImageView
+                 android:visibility="gone"
+            android:id="@+id/img_height"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="12dp"
+            android:gravity="center"
+            android:src="@drawable/ic_more_shutdown" />
+
+        <TextView
+            android:id="@+id/tv_height"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/img_height"
+            android:gravity="center_vertical"
+            android:text="Start Time"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/img_height_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:clickable="true"
+            android:gravity="center"
+            android:src="@drawable/ic_action_next_item" />
+         <TextView
+            android:id="@+id/tv_sleep_min_start"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+               android:layout_toLeftOf="@id/img_height_next"
+            android:gravity="center_vertical"
+            android:text="00"
+            android:textColor="@color/black_device"
+            android:textSize="14sp" />
+               <TextView
+            android:id="@+id/tv_sleep_unit_start"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+               android:layout_toLeftOf="@id/tv_sleep_min_start"
+            android:gravity="center_vertical"
+            android:text=" : "
+            android:textColor="@color/black_device"
+            android:textSize="14sp" />
+               <TextView
+            android:id="@+id/tv_sleep_hour_start"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+               android:layout_toLeftOf="@id/tv_sleep_unit_start"
+            android:gravity="center_vertical"
+            android:text="22"
+            android:textColor="@color/black_device"
+            android:textSize="14sp" />
+    </RelativeLayout>
+        <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1px"
+           android:layout_marginLeft="12dp"
+        android:background="@color/alertdialog_line" />
+    <RelativeLayout
+        android:id="@+id/rl_end_time"
+        style="@style/DeviceItem"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:clickable="true"
+   android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp" >
+
+        <ImageView
+                 android:visibility="gone"
+            android:id="@+id/img_age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="12dp"
+            android:gravity="center"
+            android:src="@drawable/ic_more_shutdown" />
+
+        <TextView
+            android:id="@+id/tv_age"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/img_age"
+            android:gravity="center_vertical"
+            android:text="End Time"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/img_age_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:clickable="true"
+            android:gravity="center"
+            android:src="@drawable/ic_action_next_item" />
+     <TextView
+            android:id="@+id/tv_sleep_min_end"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+               android:layout_toLeftOf="@id/img_age_next"
+            android:gravity="center_vertical"
+            android:text="00"
+            android:textColor="@color/black_device"
+            android:textSize="14sp" />
+               <TextView
+            android:id="@+id/tv_sleep_unit_end"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+               android:layout_toLeftOf="@id/tv_sleep_min_end"
+            android:gravity="center_vertical"
+            android:text=" : "
+            android:textColor="@color/black_device"
+            android:textSize="14sp" />
+               <TextView
+            android:id="@+id/tv_sleep_hour_end"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+               android:layout_toLeftOf="@id/tv_sleep_unit_end"
+            android:gravity="center_vertical"
+            android:text="22"
+            android:textColor="@color/black_device"
+            android:textSize="14sp" />
+    </RelativeLayout>
+        <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1px"
+        android:background="@color/alertdialog_line" />
+</LinearLayout>

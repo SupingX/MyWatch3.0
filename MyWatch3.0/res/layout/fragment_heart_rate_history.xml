@@ -1,0 +1,198 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="${relativePackage}.${activityClass}" >
+	
+                
+          
+          <LinearLayout 
+              android:visibility="invisible"
+              android:id="@+id/ll_count"
+              android:layout_alignParentBottom="true"
+              android:layout_height="100dp"
+              android:layout_width="match_parent"
+              android:orientation="horizontal"
+              >
+              
+              <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:weightSum="2" >
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="horizontal" >
+
+                            <ImageView
+                                android:id="@+id/img_pedo_cal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerVertical="true"
+                                android:paddingLeft="12dp"
+                                android:paddingRight="12dp"
+                                android:src="@drawable/ic_sleep_total_icon" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_toRightOf="@id/img_pedo_cal"
+                       android:paddingLeft="12dp"
+                                android:paddingRight="12dp"
+                                android:text="SLEEP TOTAL"
+                                android:textColor="@color/grey"
+                                android:textSize="12sp" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1" >
+
+                            <TextView
+                                android:id="@+id/tv_sleep_total"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerVertical="true"
+                                android:paddingBottom="8dp"
+                                android:paddingLeft="12dp"
+                                android:paddingRight="12dp"
+                                android:text="0.00"
+                                android:textColor="@color/text_black"
+                                android:textSize="22sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                      
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:paddingBottom="8dp"
+                                android:paddingLeft="12dp"
+                                android:paddingRight="12dp"
+                                android:text="HOURS"
+                                android:textColor="@color/grey"
+                                android:textSize="16sp" />
+                        </RelativeLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:weightSum="2" >
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="horizontal" >
+
+                            <ImageView
+                                android:id="@+id/img_complete"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerVertical="true"
+                                android:padding="12dp"
+                                android:src="@drawable/ic_pedo_average_steps" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_toRightOf="@id/img_complete"
+                                android:padding="12dp"
+                                android:text="COMPLETE"
+                                android:textColor="@color/grey"
+                                android:textSize="12sp" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1" >
+
+                            <TextView
+                                android:id="@+id/tv_sleep_complete"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerVertical="true"
+                                android:paddingBottom="8dp"
+                                android:paddingLeft="12dp"
+                                android:paddingRight="12dp"
+                                android:text="0.00"
+                                android:textColor="@color/text_black"
+                                android:textSize="22sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:paddingBottom="8dp"
+                                android:paddingLeft="12dp"
+                                android:paddingRight="12dp"
+                                android:text="HOURS"
+                                android:textColor="@color/grey"
+                                android:textSize="16sp" />
+                        </RelativeLayout>
+                    </LinearLayout>
+              
+          </LinearLayout>
+	
+          <LinearLayout 
+                           android:layout_above="@id/ll_count"
+	    android:layout_height="match_parent"
+	    android:layout_width="match_parent"
+	    android:orientation="vertical"
+	    >
+          <LinearLayout
+              android:layout_gravity="center_horizontal"
+                    android:id="@+id/ll_step_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/tv_preious"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="4dp"
+                        android:text="@string/preious"
+                        android:textColor="@color/text_black"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/tv_sleep_history_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/text_black"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/tv_next"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                      android:padding="4dp"
+                        android:text="@string/next"
+                        android:textColor="@color/text_black"
+                        android:textSize="22sp" />
+                </LinearLayout>
+          <com.mycj.mywatch.view.HistoryView
+              android:layout_height="match_parent"
+              android:layout_width="match_parent"
+              android:id="@+id/history_sleep"
+              ></com.mycj.mywatch.view.HistoryView>
+          </LinearLayout>
+</RelativeLayout>

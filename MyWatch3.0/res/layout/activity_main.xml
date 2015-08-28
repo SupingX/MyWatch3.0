@@ -1,0 +1,359 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_bg"
+    android:gravity="center" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:scrollbars="none"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            tools:context="${relativePackage}.${activityClass}" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="6dp"
+                android:layout_marginTop="6dp"
+                android:orientation="vertical"
+                android:weightSum="4" >
+
+                <FrameLayout
+                    android:id="@+id/fr_pedo"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:padding="6dp" >
+
+                    <ImageView
+                        android:id="@+id/img_main_pedo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:clickable="true"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/ic_pedo_btn" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top|left"
+                        android:padding="8dp"
+                        android:text="PEDOMETER"
+                        android:textColor="#fff" />
+
+                    <TextView
+                               android:id="@+id/tv_main_step"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="0"
+                        android:textColor="#fff"
+                        android:textSize="22sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|end"
+                        android:padding="8dp"
+                        android:text="STEPS"
+                        android:textColor="#fff" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/fr_hr"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:padding="6dp" >
+
+                    <ImageView
+                        android:id="@+id/img_main_hr"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:clickable="true"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/ic_heart_rate_btn" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top|left"
+                        android:padding="8dp"
+                        android:text="HEART RATE"
+                        android:textColor="#fff" />
+
+                    <TextView
+                        android:id="@+id/tv_main_hr"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="0"
+                        android:textColor="#fff"
+                        android:textSize="22sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|end"
+                        android:padding="8dp"
+                        android:text="BMP"
+                        android:textColor="#fff" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/fr_clock"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:padding="6dp" >
+
+                    <ImageView
+                        android:id="@+id/img_main_clock"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:clickable="true"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/ic_clock_btn" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top|left"
+                        android:padding="8dp"
+                        android:text="CLOCK"
+                        android:textColor="#fff" />
+
+                    <TextView
+                        android:id="@+id/tv_main_clock"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="06:00"
+                        android:textColor="#fff"
+                        android:textSize="22sp" />
+
+                    <TextView
+                                    android:id="@+id/tv_main_clock_on_off"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|end"
+                        android:padding="8dp"
+                        android:text="OFF"
+                        android:textColor="#fff" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/fr_camera"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:padding="6dp" >
+
+                    <ImageView
+                        android:id="@+id/img_main_camera"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:clickable="true"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/ic_camera_btn" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top|left"
+                        android:padding="8dp"
+                        android:text="CAMERA"
+                        android:textColor="#fff" />
+                </FrameLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="6dp"
+                android:layout_marginTop="6dp"
+                android:orientation="vertical"
+                android:weightSum="4" >
+
+                <FrameLayout
+                    android:id="@+id/fr_sleep"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:padding="6dp" >
+
+                    <ImageView
+                        android:id="@+id/img_main_sleep"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:clickable="true"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/ic_sleep_btn" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top|left"
+                        android:padding="8dp"
+                        android:text="SLEEP"
+                        android:textColor="#fff" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="6.5"
+                        android:textColor="#fff"
+                        android:textSize="22sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|end"
+                        android:padding="8dp"
+                        android:text="HOURS"
+                        android:textColor="#fff" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/fr_device"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:padding="6dp" >
+
+                    <ImageView
+                        android:id="@+id/img_main_device"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:clickable="true"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/ic_device_btn" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top|left"
+                        android:padding="8dp"
+                        android:text="DEVICE"
+                        android:textColor="#fff" />
+
+                    <TextView
+                        android:id="@+id/tv_main_rssi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="--"
+                        android:textColor="#fff"
+                        android:textSize="22sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|end"
+                        android:padding="8dp"
+                        android:text="RSSI"
+                        android:textColor="#fff" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/fr_weather"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:padding="6dp" >
+
+                    <ImageView
+                        android:id="@+id/img_main_weather"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:clickable="true"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/ic_weather_btn" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top|left"
+                        android:padding="8dp"
+                        android:text="WEATHER"
+                        android:textColor="#fff" />
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:padding="4dp" >
+
+                        <TextView
+                            android:id="@+id/tv_weather_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="4dp"
+                            android:text="SUN"
+                            android:textColor="#fff"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/tv_weather_temp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="4dp"
+                            android:text="31度"
+                            android:textColor="#fff"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+                    <TextView
+                        android:id="@+id/tv_weather_address"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|end"
+                        android:padding="8dp"
+                        android:text="深圳"
+                        android:textColor="#fff" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/fr_more"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:padding="6dp" >
+
+                    <ImageView
+                        android:id="@+id/img_main_more"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:clickable="true"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/ic_more_btn" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top|left"
+                        android:padding="8dp"
+                        android:text="MORE"
+                        android:textColor="#fff" />
+                </FrameLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
